@@ -1,18 +1,24 @@
-<h1> hello  </h1>
+{% extends 'base.html' %}
 
-<p>First page cool</p>
+{% block content %}
 
-<p>My name is {{first_name}}</p>
+  <h1> hello  </h1>
 
-<p>This is {{stuff | safe}}</p>
+  <p>First page cool</p>
 
-<h3> Color </h3>
-{% for col in color %}
-  {% if col == 55 %}
-    {{ col + 20 }}<br/>
-  {% else %}
-  Color => {{col}}<br></br>
-  {% endif %}
-  
-{% endfor %}
+  <p>My name is {{first_name}}</p>
+
+  <p>This is {{stuff | safe}}</p>
+
+  <h3> Color </h3>
+  {% for col in color %}
+    {% if col == 55 %}
+      {{ col + 20 }}<br/>
+    {% else %}
+      Color => {{col}}<br></br>
+    {% endif %}
+    
+  {% endfor %}
+
+{% endblock %}
 
